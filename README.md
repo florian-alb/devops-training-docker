@@ -69,8 +69,13 @@
 ## 6️⃣
 
 - 6.a :
+
   - `docker run` : Permet de lancer un conteneur à la fois, avec des options en ligne de commande pour définir les configurations (ports, volumes, réseaux, variables d'environnement, etc.).
   - **Docker compose** :
     - Outil qui permet de définir et de gérer des applications multi-conteneurs avec un fichier docker-compose.yml.
     - Centralise la configuration des conteneurs (réseaux, volumes, dépendances, etc.).
     - Avec une seule commande (docker-compose up), tous les conteneurs définis dans le fichier YML sont lancés.
+
+- 6.b :
+  - Lancer tous les conteneurs définis dans le fichier docker-compose.yml `docker-compose up`
+  - Arrêter tous les conteneurs `docker-compose down`
