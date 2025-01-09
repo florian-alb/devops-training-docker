@@ -1,4 +1,4 @@
-### 3
+### 3️⃣
 
 - 3.a : `docker pull nginx`
 
@@ -14,7 +14,7 @@
 
 - 3.f : commande : `docker cp /Users/flo/Desktop/ynov/Dev-Ops/tp1/devops-training-docker/html/index.html <CONTAINER_ID>:/usr/share/nginx/html`
 
-## 4
+## 4️⃣
 
 - 4.b :
 
@@ -46,3 +46,22 @@
 
 - Requiert une reconstruction à chaque modification de fichier.
 - Moins flexible pour le développement rapide.
+
+## 5️⃣
+
+- 5.a: commandes :
+
+  - mysql `docker pull mysql`
+  - phpmyadmin `docker pull phpmyadmin`
+
+- 5.b: commandes:
+
+  - creation d'un network : `docker network create my-network`
+  - mysql: `docker run -d --name mysql-container --network my-network -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=mydb -p 3306:3306 mysql`
+  - phpmyadmin : `docker run -d --name phpmyadmin-container --network my-network -e PMA_HOST=mysql-container -e PMA_HOST=mysql-container -p 8080:80 phpmyadmin`
+
+  Arguments :
+
+  - `--name` : nom du container
+  - `-e` : varialbes d'environnement
+  - `--network`: nom du network crée
