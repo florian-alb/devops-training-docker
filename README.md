@@ -17,5 +17,32 @@
 ## 4
 
 - 4.b :
+
   - j'ai build l'image docker avec la commande : `docker build -t custom-nginx`. J'ai utilisé le paramètre t pour lui donner un nom.
   - J'ai lancé cette image avec la commande `docker run -d -p 8080:80 custom-nginx`
+
+- 4.c :
+
+##### Volume Mount (-v)
+
+**Avantages** :
+
+- Idéal pour le développement.
+- Pas besoin de reconstruire l'image.
+- Permet de tester facilement des changements dans les fichiers locaux.
+
+**Inconvénients** :
+
+- Moins portable : nécessite des fichiers locaux.
+
+##### Copy (Dockerfile)
+
+**Avantages** :
+
+- Image autonome et immuable, parfaite pour la production.
+- Plus facile à partager et distribuer (aucune dépendance externe).
+
+**Inconvénients** :
+
+- Requiert une reconstruction à chaque modification de fichier.
+- Moins flexible pour le développement rapide.
